@@ -6,7 +6,8 @@
 
         <label for="">Nombre: </label>
         <input type="text" name="cajaNombre" #cajaNombre="ngModel"
-        [(ngModel)]="user.nombre">
+        [(ngModel)]="user.nombre" required>
+        <span *ngIf="cajaNombre.valid == false && cajaNombre.touched">El nombre es Obligatorio*</span>
 
         <label for="">Apellidos: </label>
         <input type="text" name="cajaApellidos" #cajaApellidos="ngModel"
