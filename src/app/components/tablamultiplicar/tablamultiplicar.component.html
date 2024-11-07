@@ -16,9 +16,9 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let i of index">
-                    <td>{{i}}*{{num}}</td>
-                    <td>{{i*num}}</td>
+                <tr *ngFor="let i of index; let cont = index">
+                    <td>{{num}}*{{cont + 1}}</td>
+                    <td>{{i}}</td>
                 </tr>
             </tbody>
         </table>
